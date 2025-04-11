@@ -7,7 +7,7 @@ import process from 'process';
 // Displaying a table of employee records fetched from an API.
 // Each record can be edited/deleted.
 
-const API_URL = process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:5050';
+const API_URL = process.env.NODE_ENV === 'production' ? '/' : 'http://107.20.18.106:5000';
 
 // Record component receives a single record as a prop and displays its details (name, position, level).
 const Record = (props) => (

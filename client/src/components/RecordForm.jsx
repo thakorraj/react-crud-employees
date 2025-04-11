@@ -4,7 +4,7 @@ import process from 'process'; // Import the 'process' object from the 'process'
 
 // Form component for creating or updating employee records. (Create/Edit Employee Screen)
 
-const API_URL = process.env.NODE_ENV === 'production' ? '/' : 'http://localhost:5050'; // API URL
+const API_URL = process.env.NODE_ENV === 'production' ? '/' : 'http://107.20.18.106:5000'; // API URL
 
 export default function RecordForm() {
   // Manage form data and record status.
