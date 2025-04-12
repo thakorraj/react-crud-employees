@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend-deployment
+  namespace: crud
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+        - name: backend-container
+          image: thakorrajp/crud-backend
+          ports:
+            - containerPort: 5000
+          volumeMounts:
+            - name: crud-storage
+              mountPath: /app/data
+      volumes:
+        - name: crud-storage
+          persistentVolumeClaim:
+            claimName: crud-pvc
+
