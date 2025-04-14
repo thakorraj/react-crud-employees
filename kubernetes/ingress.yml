@@ -7,7 +7,7 @@ metadata:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-    - host: 13.218.240.30   # Replace with your actual domain
+    - host: crudtest   # Replace with your actual domain
       http:
         paths:
           - path: /frontend      # Route root path to frontend-service

@@ -8,7 +8,7 @@ spec:
     app: mongo  # 👈 matches the deployment's label
   ports:
     - protocol: TCP
-      port: 80          # Service port
+      port: 27017          # Service port
       targetPort: 27017 # Port in container (Node.js app)
-  type: NodePort        # Exposes it on a random port on the node
+  type: ClusterIP        # Exposes it on a random port on the node
 

@@ -8,7 +8,8 @@ spec:
     app: frontend  # 👈 matches the deployment's label
   ports:
     - protocol: TCP
-      port: 80         # Service port
+      port: 5173         # Service port
       targetPort: 5173 # Port in container (Node.js app)
+      nodePort: 30001
   type: NodePort       # Exposes it on a random port on the node
 
